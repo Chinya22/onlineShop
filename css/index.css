@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter, serif;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 1300px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  font-size: 14px;
+}
+.header .header_arrow {
+  width: 5px;
+  height: 5px;
+}
+.header_mainInfo {
+  width: 100%;
+  height: 80px;
+  background-color: #1A1A25;
+}
+.header_mainInfo .wrapper {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header_mainInfo_logo {
+  width: 280px;
+  height: 30px;
+  margin-right: 50px;
+}
+.header_mainInfo_city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+}
+.header_mainInfo_city_choise {
+  color: #858FA4;
+  margin-right: 10px;
+}
+.header_mainInfo_dealersAndPartners {
+  display: flex;
+  justify-content: flex-start;
+  width: 290px;
+  border-right: #858FA4;
+}
+.header_mainInfo_dealersAndPartners_dealers {
+  border: none;
+  background: none;
+  color: #858FA4;
+  margin-right: 30px;
+}
+.header_mainInfo_dealersAndPartners_partners {
+  background-color: #384255;
+  border: none;
+  width: 140px;
+  height: 35px;
+  color: #858FA4;
+  font-weight: 700;
+  border-radius: 5px;
+}/*# sourceMappingURL=index.css.map */
