@@ -344,10 +344,33 @@ html {
             padding        : 15px 0;
         }
         &_home {
-
+            color: #ffffffbd;
+            background: none;
+            border: none;
+            outline: none;
+            font-weight: 700;
+            height: 100%;
+            border-right: 0.5px solid rgba(132, 142, 164, 0.5);
+            
+            margin-right: 20px;
+            padding: 0 20px 15px 0;
+            .active, &:hover {
+                color: #FFFFFF;
+                border-bottom: 6px solid #F53B49;
+            }
         }
         &_fitnessClub {
-
+            color: #ffffffbd;
+            background: none;
+            border: none;
+            outline: none;
+            font-weight: 700;
+            height: 100%;
+            padding: 0 0 15px 0;
+            .active, &:hover {
+                color: #FFFFFF;
+                border-bottom: 6px solid #F53B49;
+            }
         }
     }
 }
