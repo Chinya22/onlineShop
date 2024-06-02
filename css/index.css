@@ -416,4 +416,56 @@ html {
   border-radius: 5px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.main_range {
+  display: flex;
+}
+.main_range_btn {
+  width: 910px;
+  height: 80px;
+  margin-right: 90px;
+}
+.main_range_btn_item {
+  background-color: rgba(144, 156, 181, 0.3137254902);
+  color: #384255;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main_range_btn_item .active, .main_range_btn_item:hover {
+  background-color: #F53B49;
+  color: #FFFFFF;
+}
+.main_range_statistics {
+  display: flex;
+  height: 25px;
+  align-items: center;
+}
+.main_range_statistics_btn {
+  background-image: url(../img/statistics.svg);
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.main_range_statistics_item {
+  font-weight: 700;
+  font-size: 14px;
+  color: #384255;
+  opacity: 0.5;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.main_range_statistics_item .active, .main_range_statistics_item:hover {
+  opacity: 1;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

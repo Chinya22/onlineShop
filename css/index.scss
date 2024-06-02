@@ -464,3 +464,60 @@ html {
         cursor: pointer;
     }
 }
+.main_range {
+    display: flex;
+    &_btn {
+        width: 910px;
+        height: 80px;
+        margin-right: 90px;
+        &_item {
+            background-color: #909cb550;
+            color: #384255;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            // height: 35px;
+            
+            .active, 
+            &:hover{
+                background-color: #F53B49;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &_statistics {
+        display: flex;
+        height: 25px;
+        align-items: center;
+        &_btn {
+            
+            background-image: url(../img/statistics.svg);
+            background-position: center;
+            width: 25px;
+            height: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        &_item {
+            font-weight: 700;
+            font-size: 14px;
+            color: #384255;
+            opacity: 0.5;
+            white-space: nowrap;
+            margin-right: 10px;
+            
+            .active, 
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}
