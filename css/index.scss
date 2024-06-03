@@ -90,7 +90,7 @@ body {
             justify-content: flex-start;
             align-items    : center;
             flex-grow      : 1;
-            cursor: pointer;
+            cursor         : pointer;
 
             &_choise {
                 color       : #858FA4;
@@ -109,7 +109,7 @@ body {
                 background  : none;
                 color       : #858FA4;
                 margin-right: 30px;
-                cursor: pointer;
+                cursor      : pointer;
             }
 
             &_partners {
@@ -121,7 +121,7 @@ body {
                 font-weight     : 700;
                 border-radius   : 5px;
                 color           : #F6F6F6;
-                cursor: pointer;
+                cursor          : pointer;
             }
         }
 
@@ -148,7 +148,7 @@ body {
                 &_city {
                     color       : #909CB5;
                     margin-right: 5px;
-                    cursor: pointer;
+                    cursor      : pointer;
                 }
             }
 
@@ -158,7 +158,7 @@ body {
                 background  : none;
                 color       : #F53B49;
                 margin-right: 30px;
-                cursor: pointer;
+                cursor      : pointer;
             }
         }
 
@@ -171,7 +171,7 @@ body {
                 background  : none;
                 color       : #FFFFFF;
                 margin-right: 15px;
-                cursor: pointer;
+                cursor      : pointer;
             }
 
             &_logo {
@@ -209,7 +209,7 @@ body {
             padding         : 15px 20px;
             margin-right    : 50px;
             line-height     : 1px;
-            cursor: pointer;
+            cursor          : pointer;
 
             &_logo {
                 width       : 15px;
@@ -225,7 +225,7 @@ body {
             border      : none;
             outline     : none;
             margin-right: 30px;
-            cursor: pointer;
+            cursor      : pointer;
         }
 
         &_nav {
@@ -374,7 +374,7 @@ body {
 
             margin-right: 20px;
             padding     : 0 20px 15px 0;
-            cursor: pointer;
+            cursor      : pointer;
 
             .active,
             &:hover {
@@ -398,7 +398,7 @@ body {
             font-weight: 700;
             height     : 100%;
             padding    : 0 0 15px 0;
-            cursor: pointer;
+            cursor     : pointer;
 
             .active,
             &:hover {
@@ -559,18 +559,19 @@ body {
 }
 
 .main_container {
-   display: flex;
+    display: flex;
 
     &_list {
-        display: grid;
+        display              : grid;
         grid-template-columns: repeat(4, 250px);
-        gap: 20px;
-        border-right: 1px solid #858fa438;
-        padding-right: 30px;
+        gap                  : 20px;
+        border-right         : 1px solid #858fa438;
+        padding-right        : 30px;
+
         &_item {
-            display       : flex;
-            flex-direction: column;
-            position      : relative;
+            display         : flex;
+            flex-direction  : column;
+            position        : relative;
             background-color: #fff;
 
             &_img {
@@ -633,7 +634,7 @@ body {
             }
 
             &_statistics {
-                
+
                 width   : 15px;
                 height  : 15px;
                 position: absolute;
@@ -755,11 +756,11 @@ body {
                         font-weight     : 700;
                         cursor          : pointer;
                         font-size       : 14px;
-                        margin-left: 10px;
+                        margin-left     : 10px;
 
                         &_img {
-                            width : 25px;
-                            height: 25px;
+                            width       : 25px;
+                            height      : 25px;
                             margin-right: 5px;
                         }
                     }
@@ -768,66 +769,158 @@ body {
             }
         }
     }
+
     &_menu {
-        width: 210px;
-        height: 1010px;
+        width       : 210px;
+        height      : 1010px;
         padding-left: 30px;
+
         &_manufacturer {
             padding-bottom: 20px;
-            border-bottom: 1px solid #858fa438;
+            border-bottom : 1px solid #858fa438;
+
             &_title {
-                color: #384255;
-                font-weight: 700;
+                color        : #384255;
+                font-weight  : 700;
                 margin-bottom: 10px;
             }
         }
+
         &_checkbox {
-            display: flex;
-            align-items: center;
+            display      : flex;
+            align-items  : center;
             margin-bottom: 10px;
+
             label {
-                display: flex;
-                align-items: center;
+                display        : flex;
+                align-items    : center;
                 justify-content: center;
-                color: #384255c2;
-                cursor: pointer;
+                color          : #384255c2;
+                cursor         : pointer;
+
                 &::before {
-                    display: block;
-                    content: '';
-                    width: 12px;
-                    height: 12px;
-                    background-image: url(../img/checkbox_inactive.svg);
-                    background-size: cover;
+                    display            : block;
+                    content            : '';
+                    width              : 12px;
+                    height             : 12px;
+                    background-image   : url(../img/checkbox_inactive.svg);
+                    background-size    : cover;
                     background-position: center;
-                    margin-right: 10px;
+                    margin-right       : 10px;
                 }
             }
+
             input {
                 display: none;
             }
+
             input:checked+label:before {
                 background-image: url(../img/checkbox_active.svg);
             }
         }
+
         &_functional {
-            padding-top: 30px;
+            padding-top   : 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #858fa438;
+            border-bottom : 1px solid #858fa438;
+
             &_title {
-                
-                color: #384255;
-                font-weight: 700;
+
+                color        : #384255;
+                font-weight  : 700;
                 margin-bottom: 10px;
             }
         }
+
         &_stock {
-            padding-top: 30px;
+            padding-top   : 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #858fa438;
+            border-bottom : 1px solid #858fa438;
+
             &_title {
-                color: #384255;
+                color        : #384255;
+                font-weight  : 700;
+                margin-bottom: 10px;
+            }
+        }
+
+        &_price {
+            padding-top   : 30px;
+            padding-bottom: 30px;
+            border-bottom : 1px solid #858fa438;
+
+            &_title {
+                color        : #384255;
+                font-weight  : 700;
+                margin-bottom: 10px;
+            }
+
+            &_choise {
+                display      : flex;
+                margin-bottom: 20px;
+
+                &_input {
+                    width       : 75px;
+                    height      : 30px;
+                    margin-right: 5px;
+                    cursor      : pointer;
+
+                    &:last-child {
+                        margin-right: 0;
+                        margin-left : 5px;
+                    }
+                }
+
+                &_img {}
+
+            }
+
+            &_img {
+                width : 180px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+        &_cleaningBtn {
+            color: #F53B49;
+            background-color: #fff;
+            border: 1px solid #F53B49;
+            border-radius: 5px;
+            font-weight: 700;
+            width: 110px;
+            height: 40px;
+            padding: 10px 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        &_help {
+            width: 180px;
+            height: 105px;
+            background-color: #1A1A25;
+            padding: 20px;
+            border-radius: 5px;
+            &_title {
+                color: #fff;
                 font-weight: 700;
                 margin-bottom: 10px;
+                font-size: 16px;
+            }
+            &_btn {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-weight: 600;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_logo {
+                    width: 10px;
+                    height: 12px;
+                    margin-left: 10px;
+                }
             }
         }
     }
