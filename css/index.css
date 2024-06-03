@@ -491,21 +491,20 @@ body {
 }
 .main_container_list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 250px);
+  gap: 20px;
   border-right: 1px solid rgba(133, 143, 164, 0.2196078431);
   padding-right: 30px;
 }
 .main_container_list_item {
   display: flex;
   flex-direction: column;
-  width: 270px;
-  height: 580px;
   position: relative;
+  background-color: #fff;
 }
 .main_container_list_item_img {
-  width: 270px;
-  height: 270px;
+  width: 100%;
+  height: auto;
 }
 .main_container_list_item_percent {
   width: 35px;
@@ -655,9 +654,72 @@ body {
   font-weight: 700;
   cursor: pointer;
   font-size: 14px;
+  margin-left: 10px;
 }
 .main_container_list_item_info_buy_btn_img {
   width: 25px;
   height: 25px;
   margin-right: 5px;
+}
+.main_container_menu {
+  width: 210px;
+  height: 1010px;
+  padding-left: 30px;
+}
+.main_container_menu_manufacturer {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(133, 143, 164, 0.2196078431);
+}
+.main_container_menu_manufacturer_title {
+  color: #384255;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.main_container_menu_checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.main_container_menu_checkbox label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(56, 66, 85, 0.7607843137);
+  cursor: pointer;
+}
+.main_container_menu_checkbox label::before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/checkbox_inactive.svg);
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+.main_container_menu_checkbox input {
+  display: none;
+}
+.main_container_menu_checkbox input:checked + label:before {
+  background-image: url(../img/checkbox_active.svg);
+}
+.main_container_menu_functional {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(133, 143, 164, 0.2196078431);
+}
+.main_container_menu_functional_title {
+  color: #384255;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.main_container_menu_stock {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(133, 143, 164, 0.2196078431);
+}
+.main_container_menu_stock_title {
+  color: #384255;
+  font-weight: 700;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=index.css.map */
