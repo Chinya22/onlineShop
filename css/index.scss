@@ -683,7 +683,7 @@ body {
                     margin-bottom: 5px;
                 }
 
-                &_type {
+                &_item {
                     color: #384255;
 
                     span {
@@ -691,37 +691,6 @@ body {
                     }
                 }
 
-                &_size {
-                    color: #384255;
-
-                    span {
-                        color: #909CB5;
-                    }
-                }
-
-                &_power {
-                    color: #384255;
-
-                    span {
-                        color: #909CB5;
-                    }
-                }
-
-                &_canvas {
-                    color: #384255;
-
-                    span {
-                        color: #909CB5;
-                    }
-                }
-
-                &_manufacturer {
-                    color: #384255;
-
-                    span {
-                        color: #909CB5;
-                    }
-                }
 
                 &_rating {
                     color        : #909CB5;
@@ -978,6 +947,8 @@ body {
 .main_carousel {
     display       : flex;
     flex-direction: column;
+    width: 100%;
+    height: 415px;
 
     &_title {
         color        : #1A1A25;
