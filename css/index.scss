@@ -538,7 +538,7 @@ body {
             border             : none;
             outline            : none;
             cursor             : pointer;
-            background-color   : #FFFFFF;
+            background-color   : #F6F6F6;
         }
 
         &_item {
@@ -566,7 +566,7 @@ body {
         display              : grid;
         grid-template-columns: repeat(4, 250px);
         gap                  : 20px;
-        border-right         : 1px solid #858fa438;
+        
         padding-right        : 30px;
 
         &_item {
@@ -787,6 +787,7 @@ body {
         width       : 210px;
         height      : 1010px;
         padding-left: 30px;
+        border-left         : 1px solid #858fa438;
 
         &_manufacturer {
             padding-bottom: 20px;

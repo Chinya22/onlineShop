@@ -471,7 +471,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #F6F6F6;
 }
 .main_range_statistics_item {
   font-weight: 700;
@@ -494,7 +494,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 250px);
   gap: 20px;
-  border-right: 1px solid rgba(133, 143, 164, 0.2196078431);
   padding-right: 30px;
 }
 .main_container_list_item {
@@ -676,6 +675,7 @@ body {
   width: 210px;
   height: 1010px;
   padding-left: 30px;
+  border-left: 1px solid rgba(133, 143, 164, 0.2196078431);
 }
 .main_container_menu_manufacturer {
   padding-bottom: 20px;

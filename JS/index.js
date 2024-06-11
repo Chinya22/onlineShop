@@ -61,6 +61,15 @@ for (let i = 0; i < cardsInfoList.length; i++) {
     createCard(cardsInfoList[i], '.main_container_list')
 }
 
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 6,
+    spaceBetween: 10,
+  
+  });
+
 function createCard(cardInfo, cardsWrapper) {
   const cardsList = document.querySelector(cardsWrapper);
 
