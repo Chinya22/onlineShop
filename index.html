@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/index.css" />
     <title>WellFitness</title>
@@ -136,14 +136,14 @@
         </div>
         <div class="main_range">
           <div class="main_range_btn">
-            <button class="main_range_btn_item active">Беговые дорожки</button>
-            <button class="main_range_btn_item">Эллиптические</button>
-            <button class="main_range_btn_item">Велотренажеры</button>
-            <button class="main_range_btn_item">Cтепперы</button>
-            <button class="main_range_btn_item">Горнолыжные</button>
-            <button class="main_range_btn_item">Гребные тренажеры</button>
-            <button class="main_range_btn_item">Гребные тренажеры</button>
-            <button class="main_range_btn_item">Гребные тренажеры</button>
+            <button data-filter="all" class="main_range_btn_item active">Беговые дорожки</button>
+            <button data-filter="elliptical" class="main_range_btn_item">Эллиптические</button>
+            <button data-filter="bike" class="main_range_btn_item">Велотренажеры</button>
+            <button data-filter="stepper" class="main_range_btn_item">Cтепперы</button>
+            <button data-filter="ski" class="main_range_btn_item">Горнолыжные</button>
+            <button data-filter="rowing" class="main_range_btn_item">Гребные тренажеры</button>
+            <button data-filter="rowing" class="main_range_btn_item">Гребные тренажеры</button>
+            <button data-filter="rowing" class="main_range_btn_item">Гребные тренажеры</button>
           </div>
           <div class="main_range_statistics">
             <button class="main_range_statistics_btn"></button>
@@ -2329,6 +2329,37 @@
           </div>
         </div>
       </div>
+      <div id="modalWindow" class="modal">
+        <div class="modal_content">
+          <span class="modal_content_close"></span>
+          <h2 class="modal_content_title">Заявка на обратный звонок</h2>
+          <div class="modal_content_input">
+            <label for="name" class="modal_content_input_text">Имя</label>
+            <input
+              type="text"
+              placeholder="Имя"
+              class="modal_content_input_entry"
+              name="name"
+            />
+          </div>
+          <div class="modal_content_input">
+            <label for="telephone" class="modal_content_input_text"
+              >Телефон</label
+            >
+            <input
+              type="tel"
+              placeholder="+7 (_ _ _) - _ _ _ - _ _ - _ _"
+              class="modal_content_input_entry"
+              name="telephone"
+            />
+          </div>
+          <div class="modal_content_text">
+            Нажимая на кнопку, вы даете согласие на обработку персональных
+            данных и соглашаетесь c <span>политикой конфиденциальности</span>
+          </div>
+          <button class="modal_content_btn">Заказать звонок</button>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="wrapper">
@@ -2439,14 +2470,14 @@
                 alt="inst"
                 class="footer_line_social_link_img"
             /></a>
-          
+
             <a href="#" class="footer_line_social_link"
               ><img
                 src="img/facebook.svg"
                 alt="facebook"
                 class="footer_line_social_link_img"
             /></a>
-          
+
             <a href="#" class="footer_line_social_link"
               ><img
                 src="img/youtube.svg"

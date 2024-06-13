@@ -4,6 +4,7 @@ const cardsInfoList = [
     img: "img/trainer.png",
     price: "1134900 ₽",
     oldPrice: "34900 ₽",
+    categori: ['all'],
     characteristics: [
       {
         name: "Тип дорожки:",
@@ -32,6 +33,7 @@ const cardsInfoList = [
     img: "img/trainer.png",
     price: "1134900 ₽",
     oldPrice: "34900 ₽",
+    categori: ['all'],
     characteristics: [
       {
         name: "Тип дорожки:",
@@ -54,7 +56,181 @@ const cardsInfoList = [
         value: "Cardio Power",
       },
     ],
-  }
+  },
+  {
+    title: "Эллиптический тренажер",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'elliptical'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
+  {
+    title: "Велотренажер B37",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'bike'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
+  {
+    title: "Степпер",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'stepper'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
+  {
+    title: "Горнолыжный тренажер",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'ski'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
+  {
+    title: "Гребной тренажер",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'rowing'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
+  {
+    title: "Горнолыжный тренажер",
+    img: "img/trainer.png",
+    price: "1134900 ₽",
+    oldPrice: "34900 ₽",
+    categori: ['all', 'ski'],
+    characteristics: [
+      {
+        name: "Тип дорожки:",
+        value: "Домашняя",
+      },
+      {
+        name: "Бег. полотно:",
+        value: "1200 х 450 мм",
+      },
+      {
+        name: "Мощность двигателя:",
+        value: "2,0 л.с.",
+      },
+      {
+        name: "Беговое полотно:",
+        value: "2-х слойное",
+      },
+      {
+        name: "Производитель:",
+        value: "Cardio Power",
+      },
+    ],
+  },
 ];
 
 for (let i = 0; i < cardsInfoList.length; i++) {
@@ -75,6 +251,9 @@ function createCard(cardInfo, cardsWrapper) {
 
   const card = document.createElement("div");
   card.classList.add("main_container_list_item");
+  for (let i=0; i < cardInfo.categori.length; i++) {
+    card.classList.add(cardInfo.categori[i]);
+  }
   cardsList.append(card);
 
   const img = document.createElement("img");
@@ -182,4 +361,52 @@ function createCard(cardInfo, cardsWrapper) {
   buyBtnImg.src = "img/bag_card.svg";
   buyBtnImg.classList.add("main_container_list_item_info_buy_btn_img");
   buyBtn.prepend(buyBtnImg);
+}
+
+
+const openModal = document.querySelector('.header_mainInfo_call_btn');
+const modal = document.getElementById('modalWindow');
+
+const closeBtn = document.querySelector('.modal_content_close');
+
+openModal.onclick = () => {
+  modal.classList.add('modal_active');
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', hideModal);
+
+  function closeModal() {
+    modal.classList.remove('modal_active');
+    closeBtn.removeEventListener('click', closeModal);
+  }
+  function hideModal(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+}
+
+const filter = document.querySelectorAll ('.main_range_btn_item');
+const cards = document.querySelectorAll ('.main_container_list_item');
+
+for (i=0; i<filter.length; i++) {
+  filter[i].onclick = function () {
+    filterCards(this.dataset.filter)
+  }
+}
+
+function filterCards(data) {
+  for (i=0; i<cards.length; i++) {
+    if (!cards[i].classList.contains(data)) {
+      cards[i].style.display = 'none';
+    } else {
+      cards[i].style.display = 'flex';
+    }
+  }
+  for (i=0; i<filter.length; i++) {
+    if (filter[i].dataset.filter === data) {
+      filter[i].classList.add('active');
+    } else {
+      filter[i].classList.remove('active');
+    }
+  }
 }
