@@ -54,6 +54,9 @@ body {
   width: 100%;
   font-size: 14px;
 }
+.header > span {
+  width: 100%;
+}
 .header .header_arrow {
   width: 5px;
   height: 5px;
@@ -494,6 +497,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 250px);
   gap: 20px;
+  border-right: 1px solid rgba(133, 143, 164, 0.2196078431);
   padding-right: 30px;
 }
 .main_container_list_item {
@@ -661,21 +665,27 @@ body {
 }
 .main_container_pagination_container_number {
   color: #909CB5;
-  margin-right: 25px;
+  margin-right: 5px;
   font-weight: 700;
   cursor: pointer;
+  width: 25px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main_container_pagination_container_number:last-child {
   margin-right: 0;
 }
 .main_container_pagination_container_number.active, .main_container_pagination_container_number:hover {
   color: #1A1A25;
+  background-color: #fff;
 }
 .main_container_menu {
   width: 210px;
   height: 1010px;
   padding-left: 30px;
-  border-left: 1px solid rgba(133, 143, 164, 0.2196078431);
 }
 .main_container_menu_manufacturer {
   padding-bottom: 20px;
@@ -1140,4 +1150,175 @@ footer {
   border-radius: 3px;
   cursor: pointer;
   align-self: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header_mainInfo .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header_menu .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+  .header_menu_nav_item:last-child {
+    margin-right: 65px;
+  }
+  .header_tabs .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .banner {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 330px;
+    width: 100%;
+  }
+  .banner_logo {
+    width: 130px;
+    height: auto;
+  }
+  .banner_title {
+    margin-bottom: 20px;
+  }
+  .main_container_list {
+    grid-template-columns: repeat(3, 280px);
+  }
+  .footer_info {
+    justify-content: space-between;
+  }
+  .footer_info_menu_item {
+    margin-right: 20px;
+    width: 205px;
+  }
+  .footer_info_menu_item:last-child {
+    margin-right: 0;
+  }
+  .footer_line {
+    justify-content: space-between;
+  }
+  .footer_line_logo {
+    margin-right: 75px;
+  }
+  .footer_line_social {
+    margin-right: 75px;
+  }
+  .footer_line_social_link:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header > span {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header_mainInfo {
+    width: 50%;
+    border: none;
+  }
+  .header_mainInfo_dealersAndPartners {
+    display: none;
+  }
+  .header_mainInfo_call {
+    display: none;
+  }
+  .header_mainInfo_entrance {
+    display: none;
+  }
+  .header_menu {
+    width: 50%;
+  }
+  .header_menu .wrapper {
+    justify-content: flex-end;
+  }
+  .header_menu_catalog {
+    display: none;
+  }
+  .header_menu_nav {
+    display: none;
+  }
+  .header_menu_search {
+    height: 100%;
+    border-right: 0.5px solid rgba(132, 142, 164, 0.5);
+    padding-right: 45px;
+  }
+  .header_menu_buttons {
+    height: 100%;
+  }
+  .breadcrumbs {
+    padding-top: 40px;
+    height: auto;
+  }
+  .breadcrumbs_item {
+    display: none;
+  }
+  .breadcrumbs_item:last-child {
+    display: block;
+  }
+  .banner {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .banner_logo {
+    width: 100px;
+    height: 60px;
+  }
+  .banner_title {
+    font-size: 21px;
+  }
+  .banner_button {
+    width: 95px;
+    height: 45px;
+  }
+  .main_range {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .main_range_btn {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .main_container_menu_help {
+    display: none;
+  }
+  .footer_info {
+    flex-direction: column;
+  }
+  .footer_info_menu {
+    justify-content: space-between;
+    padding-bottom: 45px;
+    border-bottom: 0.5px solid rgba(132, 142, 164, 0.5);
+  }
+  .footer_info_connection {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .footer_info_connection .phone_wrapper, .footer_info_connection .email_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 205px;
+    order: 1;
+  }
+  .footer_info_connection_link {
+    order: 2;
+  }
+  .footer_info_connection_link:last-child {
+    display: none;
+  }
+  .footer_info_connection_btnSapscript {
+    order: 3;
+  }
+  .footer_line_btnPartner {
+    display: none;
+  }
+  .footer_line_btnDealers {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */
