@@ -408,6 +408,7 @@ body {
   background-image: url(../img/treadmill.png);
   border-radius: 5px;
   margin-bottom: 50px;
+  background-size: 100% 100%;
 }
 .banner_logo {
   width: 150px;
@@ -576,6 +577,7 @@ body {
 }
 .main_container_list_item_info {
   padding: 25px 20px;
+  flex-grow: 1;
 }
 .main_container_list_item_info_presence {
   color: #4B7EE8;
@@ -938,6 +940,10 @@ footer {
   text-decoration: none;
   margin-bottom: 10px;
 }
+.footer_info_connection .phone_wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .footer_info_connection_btnCall, .footer_info_connection_btnWrite {
   background: transparent;
   color: #fff;
@@ -965,6 +971,12 @@ footer {
 }
 .footer_info_connection_link:last-child {
   margin-bottom: 0;
+}
+.footer_info_connection_partnerWrapper {
+  display: none;
+}
+.footer_info_connection .hiding {
+  display: none;
 }
 
 .footer_line {
@@ -1175,7 +1187,6 @@ footer {
     padding-right: 20px;
   }
   .banner {
-    background-size: contain;
     background-repeat: no-repeat;
     height: 330px;
     width: 100%;
@@ -1264,6 +1275,7 @@ footer {
   .banner {
     height: auto;
     margin-bottom: 20px;
+    padding: 30px 0 35px 40px;
   }
   .banner_logo {
     width: 100px;
@@ -1276,6 +1288,10 @@ footer {
     width: 95px;
     height: 45px;
   }
+  .main_title {
+    font-size: 33px;
+    margin-bottom: 35px;
+  }
   .main_range {
     margin-bottom: 20px;
     flex-direction: column;
@@ -1283,6 +1299,84 @@ footer {
   .main_range_btn {
     margin-bottom: 20px;
     width: 100%;
+  }
+  .main_container_list {
+    grid-template-columns: repeat(3, 220px);
+    padding: 0 20px 0 0;
+  }
+  .main_container_list_item_percent {
+    width: 25px;
+    height: 25px;
+  }
+  .main_container_list_item_percent_img {
+    width: 10px;
+    height: 10px;
+  }
+  .main_container_list_item_like {
+    width: 25px;
+    height: 25px;
+    left: 19px;
+  }
+  .main_container_list_item_like_img {
+    width: 10px;
+    height: 10px;
+  }
+  .main_container_list_item_new {
+    width: 25px;
+    height: 25px;
+    left: 39px;
+  }
+  .main_container_list_item_new_img {
+    width: 20px;
+    height: 10px;
+  }
+  .main_container_list_item_info {
+    padding: 15px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main_container_list_item_info_presence {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .main_container_list_item_info_presence > span::after {
+    content: "";
+    background-image: url(../img/points.svg);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 10px;
+    margin-left: 5px;
+  }
+  .main_container_list_item_info_presence_points {
+    display: none;
+  }
+  .main_container_list_item_info_title {
+    font-weight: 400;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+  .main_container_list_item_info_item {
+    display: none;
+  }
+  .main_container_list_item_info_rating {
+    margin-bottom: 10px;
+  }
+  .main_container_list_item_info_buy {
+    width: 100%;
+  }
+  .main_container_list_item_info_buy_price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main_container_list_item_info_buy_btn {
+    display: none;
+  }
+  .main_container_menu {
+    padding-left: 20px;
   }
   .main_container_menu_help {
     display: none;
@@ -1300,25 +1394,253 @@ footer {
     justify-content: space-between;
     margin-top: 60px;
   }
-  .footer_info_connection .phone_wrapper, .footer_info_connection .email_wrapper {
+  .footer_info_connection .phone_wrapper,
+.footer_info_connection .email_wrapper {
     display: flex;
     flex-direction: column;
     width: 205px;
     order: 1;
   }
-  .footer_info_connection_link {
-    order: 2;
-  }
-  .footer_info_connection_link:last-child {
-    display: none;
+  .footer_info_connection .link_wrapper {
+    display: flex;
+    flex-direction: column;
+    order: 4;
   }
   .footer_info_connection_btnSapscript {
+    display: none;
+  }
+  .footer_info_connection .hiding {
+    display: flex;
+    margin-bottom: 40px;
+    width: 205px;
+    font-size: 12px;
+  }
+  .footer_info_connection .hiding .footer_info_connection_btnSapscript_logo {
+    width: 15px;
+    height: 15px;
+  }
+  .footer_info_connection .display {
+    display: block;
+  }
+  .footer_info_connection_link {
+    order: 2;
+    display: none;
+  }
+  .footer_info_connection_partnerWrapper {
+    display: flex;
+    flex-direction: column;
     order: 3;
+    width: 205px;
   }
   .footer_line_btnPartner {
     display: none;
   }
   .footer_line_btnDealers {
     display: none;
+  }
+}
+@media screen and (max-width: 930px) {
+  .banner {
+    padding: 20px 40px;
+  }
+  .banner_button {
+    font-size: 14px;
+    width: 90px;
+    height: 40px;
+  }
+  .main_container_list {
+    grid-template-columns: repeat(3, 170px);
+  }
+  .main_container_list_item_info_presence {
+    font-size: 12px;
+  }
+  .main_container_list_item_info_presence > span {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+  .main_container_list_item_info_presence > span::after {
+    width: 20px;
+    background-size: contain;
+  }
+  .main_container_list_item_info_title {
+    font-size: 17px;
+  }
+  .main_container_list_item_info_rating {
+    font-size: 14px;
+  }
+  .main_container_list_item_info_buy_price {
+    font-size: 15px;
+  }
+  .footer_info_menu_item {
+    width: 190px;
+  }
+  .footer_info_connection .phone_wrapper,
+.footer_info_connection .email_wrapper, .footer_info_connection_partnerWrapper,
+.footer_info_connection .link_wrapper {
+    width: 190px;
+  }
+  .footer_info_connection .hiding {
+    width: 180px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header_mainInfo {
+    height: 60px;
+  }
+  .header_mainInfo_logo {
+    width: 235px;
+    height: auto;
+  }
+  .header_menu {
+    height: 60px;
+  }
+  .header_menu_search_logo {
+    width: 15px;
+    height: 15px;
+  }
+  .header_menu_buttons_compare {
+    margin-right: 10px;
+    width: 35px;
+    align-items: center;
+  }
+  .header_menu_buttons_compare_logo {
+    width: 13px;
+    height: 13px;
+  }
+  .header_menu_buttons_compare_notice {
+    top: 0;
+  }
+  .header_menu_buttons_heart {
+    margin-right: 10px;
+    width: 35px;
+    align-items: center;
+  }
+  .header_menu_buttons_heart_logo {
+    width: 17px;
+    height: 14px;
+  }
+  .header_menu_buttons_heart_notice {
+    top: 0;
+  }
+  .header_menu_buttons_basket {
+    width: 35px;
+    align-items: center;
+  }
+  .header_menu_buttons_basket_logo {
+    width: 14px;
+    height: 18px;
+  }
+  .header_menu_buttons_basket_notice {
+    top: 0;
+  }
+  .banner_logo {
+    width: 80px;
+    height: auto;
+  }
+  .main_container_list {
+    grid-template-columns: repeat(3, 170px);
+    gap: 10px;
+  }
+  .main_container_menu_checkbox label {
+    font-size: 14px;
+  }
+  .main_container_menu_price_choise_input {
+    width: 65px;
+  }
+  .main_container_menu_price_img {
+    width: 155px;
+  }
+  .footer_line_logo_img {
+    width: 215px;
+    height: auto;
+  }
+  .footer_line_logo_txt {
+    font-size: 11px;
+  }
+  .footer_line_social {
+    margin-right: 45px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .header_mainInfo_logo {
+    width: 180px;
+  }
+  .header_mainInfo_city_choise {
+    font-size: 12px;
+  }
+  .header_tabs {
+    height: 30px;
+  }
+  .header_tabs .wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .header_tabs_home {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .header_tabs_fitnessClub {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .banner_title {
+    font-size: 19px;
+  }
+  .banner_button {
+    width: 80px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .main_range_btn_item {
+    font-size: 13px;
+  }
+  .main_range_statistics_item {
+    font-size: 13px;
+  }
+  .main_container_list {
+    grid-template-columns: repeat(2, 210px);
+  }
+  .footer_info_menu {
+    flex-wrap: wrap;
+  }
+  .footer_info_menu_item {
+    margin-right: 0;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .footer_info_connection {
+    flex-wrap: wrap;
+  }
+  .footer_info_connection .phone_wrapper,
+.footer_info_connection .email_wrapper, .footer_info_connection_partnerWrapper,
+.footer_info_connection .link_wrapper {
+    width: 48%;
+  }
+  .footer_line_logo_img {
+    width: 190px;
+  }
+  .footer_line_social_link_img {
+    width: 15px;
+    height: 15px;
+  }
+  .footer_line_payment_visa {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+  }
+  .footer_line_payment_mastercard {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+  }
+  .footer_line_payment_symbol {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+  }
+  .footer_line_payment_paypal {
+    width: 50px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -467,6 +467,7 @@ body {
     background-image: url(../img/treadmill.png);
     border-radius   : 5px;
     margin-bottom   : 50px;
+    background-size : 100% 100%;
 
     &_logo {
         width        : 150px;
@@ -571,8 +572,8 @@ body {
         display              : grid;
         grid-template-columns: repeat(4, 250px);
         gap                  : 20px;
-        border-right : 1px solid #858fa438;
-        padding-right: 30px;
+        border-right         : 1px solid #858fa438;
+        padding-right        : 30px;
 
         &_item {
             display         : flex;
@@ -661,7 +662,8 @@ body {
             }
 
             &_info {
-                padding: 25px 20px;
+                padding  : 25px 20px;
+                flex-grow: 1;
 
                 &_presence {
                     color          : #4B7EE8;
@@ -771,16 +773,16 @@ body {
             display: flex;
 
             &_number {
-                color       : #909CB5;
-                margin-right: 5px;
-                font-weight : 700;
-                cursor      : pointer;
-                width: 25px;
-                height: 30px;
-                border-radius: 5px;
-                display: flex;
+                color          : #909CB5;
+                margin-right   : 5px;
+                font-weight    : 700;
+                cursor         : pointer;
+                width          : 25px;
+                height         : 30px;
+                border-radius  : 5px;
+                display        : flex;
                 justify-content: center;
-                align-items: center;
+                align-items    : center;
 
 
                 &:last-child {
@@ -789,7 +791,7 @@ body {
 
                 &.active,
                 &:hover {
-                    color: #1A1A25;
+                    color           : #1A1A25;
                     background-color: #fff;
                 }
             }
@@ -800,7 +802,7 @@ body {
         width       : 210px;
         height      : 1010px;
         padding-left: 30px;
-        
+
 
         &_manufacturer {
             padding-bottom: 20px;
@@ -1100,6 +1102,11 @@ footer {
 
         }
 
+        .phone_wrapper {
+            display       : flex;
+            flex-direction: column;
+        }
+
         &_btnCall,
         &_btnWrite {
             background     : transparent;
@@ -1132,6 +1139,15 @@ footer {
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        &_partnerWrapper {
+            display: none;
+        }
+
+
+        .hiding {
+            display: none;
         }
     }
 }
@@ -1399,7 +1415,6 @@ footer {
     }
 
     .banner {
-        background-size  : contain;
         background-repeat: no-repeat;
         height           : 330px;
         width            : 100%;
@@ -1533,6 +1548,7 @@ footer {
     .banner {
         height       : auto;
         margin-bottom: 20px;
+        padding      : 30px 0 35px 40px;
 
         &_logo {
 
@@ -1551,6 +1567,10 @@ footer {
     }
 
     .main {
+        &_title {
+            font-size    : 33px;
+            margin-bottom: 35px;
+        }
 
         &_range {
             margin-bottom : 20px;
@@ -1563,8 +1583,103 @@ footer {
         }
 
         &_container {
+            &_list {
+                grid-template-columns: repeat(3, 220px);
+                padding              : 0 20px 0 0;
+
+                &_item {
+
+                    &_percent {
+                        width : 25px;
+                        height: 25px;
+
+                        &_img {
+                            width : 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    &_like {
+                        width : 25px;
+                        height: 25px;
+                        left  : 19px;
+
+                        &_img {
+                            width : 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    &_new {
+                        width : 25px;
+                        height: 25px;
+                        left  : 39px;
+
+                        &_img {
+                            width : 20px;
+                            height: 10px;
+                        }
+                    }
+
+                    &_info {
+                        padding       : 15px 15px 20px 15px;
+                        display       : flex;
+                        flex-direction: column;
+
+                        &_presence {
+                            flex-direction: column;
+                            align-items   : flex-start;
+                            margin-bottom : 10px;
+
+                            &>span::after {
+                                content          : '';
+                                background-image : url(../img/points.svg);
+                                display          : inline-block;
+                                background-repeat: no-repeat;
+                                width            : 30px;
+                                height           : 10px;
+                                margin-left      : 5px;
+                            }
+
+                            &_points {
+                                display: none;
+                            }
+                        }
+
+                        &_title {
+                            font-weight  : 400;
+                            margin-bottom: 10px;
+                            flex-grow    : 1;
+                        }
+
+                        &_item {
+                            display: none;
+                        }
+
+                        &_rating {
+                            margin-bottom: 10px;
+                        }
+
+                        &_buy {
+                            width: 100%;
+
+                            &_price {
+                                width          : 100%;
+                                display        : flex;
+                                flex-direction : row;
+                                justify-content: space-between;
+                            }
+
+                            &_btn {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
 
             &_menu {
+                padding-left: 20px;
 
                 &_help {
                     display: none;
@@ -1572,44 +1687,445 @@ footer {
             }
         }
     }
+
     .footer {
         &_info {
             flex-direction: column;
+
             &_menu {
                 justify-content: space-between;
-                padding-bottom: 45px;
-                border-bottom: 0.5px solid rgba(132, 142, 164, 0.5);;
+                padding-bottom : 45px;
+                border-bottom  : 0.5px solid rgba(132, 142, 164, 0.5);
+                ;
             }
+
             &_connection {
-                flex-direction: row;
+                flex-direction : row;
                 justify-content: space-between;
-                margin-top: 60px;
-                .phone_wrapper, .email_wrapper {
-                    display: flex;
+                margin-top     : 60px;
+
+                .phone_wrapper,
+                .email_wrapper {
+                    display       : flex;
                     flex-direction: column;
-                    width: 205px;
-                    order: 1;
+                    width         : 205px;
+                    order         : 1;
                 }
-                
-                &_link {
-                    order: 2;
-                    &:last-child {
-                        display: none;
+
+                .link_wrapper {
+                    display       : flex;
+                    flex-direction: column;
+                    order         : 4;
+                }
+
+                &_btnSapscript {
+                    display: none;
+
+                }
+
+                .hiding {
+                    display      : flex;
+                    margin-bottom: 40px;
+                    width        : 205px;
+                    font-size    : 12px;
+
+                    .footer_info_connection_btnSapscript_logo {
+                        width : 15px;
+                        height: 15px;
                     }
                 }
-                &_btnSapscript {
-                    order: 3;
+
+                .display {
+                    display: block;
                 }
+
+                &_link {
+                    order  : 2;
+                    display: none;
+                }
+
+                &_partnerWrapper {
+                    display       : flex;
+                    flex-direction: column;
+                    order         : 3;
+                    width         : 205px;
+                }
+
             }
         }
+
         &_line {
 
             &_btnPartner {
                 display: none;
             }
+
             &_btnDealers {
                 display: none;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .banner {
+        padding: 20px 40px;
+
+        &_button {
+            font-size: 14px;
+            width    : 90px;
+            height   : 40px;
+        }
+    }
+
+    .main {
+
+        &_container {
+
+            &_list {
+                grid-template-columns: repeat(3, 170px);
+
+                &_item {
+
+                    &_info {
+                        &_presence {
+                            font-size: 12px;
+
+                            &>span {
+                                display     : flex;
+                                align-items : center;
+                                justify-self: center;
+
+                                &::after {
+                                    width          : 20px;
+                                    background-size: contain;
+                                }
+                            }
+                        }
+
+                        &_title {
+                            font-size: 17px;
+                        }
+
+                        &_rating {
+                            font-size: 14px;
+                        }
+
+                        &_buy {
+
+                            &_price {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    .footer {
+        &_info {
+
+            &_menu {
+
+                &_item {
+                    width: 190px;
+                }
+            }
+
+            &_connection {
+
+                .phone_wrapper,
+                .email_wrapper,
+                &_partnerWrapper,
+                .link_wrapper {
+                    width: 190px;
+                }
+
+                .hiding {
+                    width  : 180px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .header {
+
+        &_mainInfo {
+            height: 60px;
+
+            &_logo {
+                width : 235px;
+                height: auto;
+            }
+        }
+
+        &_menu {
+            height: 60px;
+
+            &_search {
+
+                &_logo {
+                    width : 15px;
+                    height: 15px;
+                }
+            }
+
+            &_buttons {
+
+                &_compare {
+                    margin-right: 10px;
+                    width       : 35px;
+                    align-items : center;
+
+                    &_logo {
+                        width : 13px;
+                        height: 13px;
+                    }
+
+                    &_notice {
+                        top: 0;
+                    }
+
+                }
+
+                &_heart {
+                    margin-right: 10px;
+                    width       : 35px;
+                    align-items : center;
+
+                    &_logo {
+                        width : 17px;
+                        height: 14px;
+                    }
+
+                    &_notice {
+                        top: 0;
+                    }
+                }
+
+                &_basket {
+                    width      : 35px;
+                    align-items: center;
+
+                    &_logo {
+
+                        width : 14px;
+                        height: 18px
+                    }
+
+                    &_notice {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        &_logo {
+            width : 80px;
+            height: auto;
+        }
+    }
+
+    .main {
+
+        &_container {
+
+            &_list {
+                grid-template-columns: repeat(3, 170px);
+                gap                  : 10px;
+            }
+
+            &_menu {
+
+                &_checkbox {
+
+                    label {
+                        font-size: 14px;
+                    }
+                }
+
+                &_price {
+
+                    &_choise {
+
+                        &_input {
+                            width: 65px;
+                        }
+                    }
+
+                    &_img {
+                        width: 155px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+
+        &_line {
+
+            &_logo {
+
+                &_img {
+                    width : 215px;
+                    height: auto;
+                }
+
+                &_txt {
+                    font-size: 11px;
+                }
+            }
+
+            &_social {
+                margin-right: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .header {
+
+        &_mainInfo {
+
+            &_logo {
+                width: 180px;
+            }
+
+            &_city {
+
+                &_choise {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &_tabs {
+            height: 30px;
+
+            .wrapper {
+                padding-top   : 5px;
+                padding-bottom: 5px;
+            }
+
+            &_home {
+                font-size     : 12px;
+                padding-bottom: 0;
+
+            }
+
+            &_fitnessClub {
+                font-size     : 12px;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .banner {
+
+        &_title {
+            font-size: 19px;
+        }
+
+        &_button {
+            width : 80px;
+            height: 30px;
+            font-size: 13px;
+        }
+    }
+
+    .main {
+        &_range {
+
+            &_btn {
+
+                &_item {
+                    font-size: 13px;
+                }
+            }
+            &_statistics {
+
+                &_item {
+                    font-size: 13px;
+                }
+            }
+        }
+        &_container {
+
+            &_list {
+                grid-template-columns: repeat(2, 210px);
+            }
+        }
+    }
+    .footer {
+
+        &_info {
+
+            &_menu {
+                flex-wrap: wrap;
+                &_item {
+                    margin-right: 0;
+                    width: 48%;
+                    margin-bottom: 20px;
+                }
+            }
+            &_connection {
+                flex-wrap: wrap;
+                .phone_wrapper,
+                .email_wrapper,
+                &_partnerWrapper,
+                .link_wrapper {
+                    width: 48%;
+                }
+            }
+        }
+        &_line {
+
+            &_logo {
+
+                &_img {
+                    width: 190px;
+                }
+            }
+            &_social {
+
+                &_link {
+
+                    &_img {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            &_payment {
+
+                &_visa {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 20px;
+                }
+                &_mastercard {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 20px;
+                }
+                &_symbol {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 20px;
+                }
+                &_paypal {
+                    width: 50px;
+                }
+            }
+        }
     }
 }
