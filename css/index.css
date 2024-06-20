@@ -477,6 +477,9 @@ body {
   cursor: pointer;
   background-color: #F6F6F6;
 }
+.main_range_statistics_filter {
+  display: none;
+}
 .main_range_statistics_item {
   font-weight: 700;
   font-size: 14px;
@@ -1642,5 +1645,81 @@ footer {
   }
   .footer_line_payment_paypal {
     width: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header_arrow {
+    display: none;
+  }
+  .header_mainInfo {
+    width: 50%;
+  }
+  .header_mainInfo_logo {
+    width: 170px;
+    height: 15px;
+  }
+  .header_mainInfo_city_choise {
+    display: none;
+  }
+  .header_menu {
+    width: 50%;
+  }
+  .header_menu_search_logo {
+    width: 20px;
+    height: 20px;
+  }
+  .header_menu_buttons_compare {
+    display: none;
+  }
+  .header_menu_buttons_heart {
+    display: none;
+  }
+  .breadcrumbs {
+    padding-top: 10px;
+  }
+  .main_title {
+    font-size: 24px;
+    font-weight: 900;
+  }
+  .main_range_btn {
+    order: 2;
+    display: flex;
+    height: 32px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .main_range_btn_item {
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+  }
+  .main_range_statistics {
+    order: 1;
+  }
+  .main_range_statistics_filter {
+    display: flex;
+  }
+  .main_range_statistics_item {
+    display: none;
+  }
+  .main_range_statistics_item:first-child {
+    display: flex;
+  }
+  .banner {
+    background-size: contain;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+  }
+  .banner_logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  .banner_title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .banner_button {
+    width: 72px;
+    height: 25px;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
