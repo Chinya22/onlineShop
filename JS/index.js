@@ -241,8 +241,33 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 6,
+    slidesPerView: 2,
     spaceBetween: 10,
+
+    breakpoints: {
+      // when window width is >= 320px
+      510: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      
+      
+      // when window width is >= 640px
+      754: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      },
+      
+      1000: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 20
+      },
+
+    }
   
   });
 
